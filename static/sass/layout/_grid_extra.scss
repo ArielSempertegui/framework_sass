@@ -1,0 +1,14 @@
+@use 'sass:list';
+@use '../base/variables' as vars;
+
+@each $gutter-size in vars.$gutter-sizes {
+    $index: list.index(vars.$gutter-sizes, $gutter-size);
+
+    .gx-#{calc($index - 1)} {
+        padding-inline: $gutter-size;
+    }
+
+    .gy-#{calc($index - 1)} {
+        padding-block: $gutter-size;
+    }
+}

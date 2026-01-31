@@ -1,0 +1,11 @@
+/* Tipografía */
+@use 'sass:list';
+@use './variables' as vars;
+
+@each $font-size in vars.$font-sizes {
+    $index: list.index(vars.$font-sizes, $font-size);
+
+    .fs-#{$index} {
+        font-size: $font-size;
+    }
+}

@@ -1,0 +1,24 @@
+/* If else */
+@use 'sass:list';
+@use './variables' as vars;
+
+@if vars.$generate-responsive-classes {
+    @each $breakpoint, $size in vars.$breakpoints {
+        @media (width >= $size) {
+            @each $gutter-size in vars.$gutter-sizes {
+                $index: list.index(vars.$gutter-sizes, $gutter-size);
+
+                .gx-#{$breakpoint}-#{calc($index - 1)} {
+                    padding-inline: $gutter-size;
+                }
+
+                .gy-#{$breakpoint}-#{calc($index - 1)} {
+                    padding-block: $gutter-size;
+                }
+            }
+        }
+    }
+} @else {
+    /* en el supuesto de realizar otra acción contraria a generar clases CSS*/
+}
+

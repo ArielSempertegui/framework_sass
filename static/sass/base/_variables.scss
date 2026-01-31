@@ -1,0 +1,17 @@
+/* Variables globales */
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$error-color: #e74c3c;
+$font-family-base: 'Arial', sans-serif;
+$font-size-base: 16px;
+$spacing-unit: 8px;
+$grid-columns: 12;
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$font-sizes: 0.875rem, 1rem, 1.25rem, 1.5rem, 2rem;
+$gutter-sizes: 0px, 8px, 16px, 32px, 64px, 128px;
+$generate-responsive-classes: true;

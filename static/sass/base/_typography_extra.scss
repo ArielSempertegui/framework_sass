@@ -1,0 +1,16 @@
+/* Tipografía extra */
+@use 'sass:list';
+@use './variables' as vars;
+
+@each $breakpoint, $size in vars.$breakpoints {
+    @media (width >= $size) {
+        @each $font-size in vars.$font-sizes {
+            $index: list.index(vars.$font-sizes, $font-size);
+
+            .fs-#{$breakpoint}-#{$index} {
+                font-size: $font-size;         
+            }
+        }
+    }
+}
+
